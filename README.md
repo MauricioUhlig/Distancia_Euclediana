@@ -8,7 +8,7 @@ Dado como entrada um vetor de pontos de um plano cartesiano, encontre a menor di
 
 ### Solução
 
-Para solução do problema foi utilizado a técnica de *Divisão e Conquista* atravéz de recursividade
+Para solução do problema foi utilizado a técnica de *Divisão e Conquista* através de recursividade
 
 ### Referências
 
