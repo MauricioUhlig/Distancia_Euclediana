@@ -37,7 +37,11 @@ def sort(array):
 sort(m)
 print m
 
+def dist(a,b):
+    return math.sqrt(math.pow(a[0] - b[0],2) + math.pow(a[1]-b[1],2))
 
+def minDistBrute(array):
+    return min(dist(array[0],array[1]),dist(array[1],array[2]),dist(array[2],array[0]))
 
 def minDist(array, n):
     if n <= 3:
@@ -58,11 +62,8 @@ def minDist(array, n):
     mf = minDistFront(s, j, d)
     return min(d, mf)
 
-def minDistBrute(array):
-    return min(dist(array[0],array[1]),dist(array[1],array[2]),dist(array[2],array[0]))
 
-def dist(a,b):
-    return math.sqrt(math.pow(a[0] - b[0],2) + math.pow(a[1]-b[1],2))
+
 
 
 resp = minDistBrute(m)
