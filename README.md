@@ -4,7 +4,7 @@ Projeto desenvolvido para um trabaho da disciplina de Complexidade de Algorítmo
 
 ### Do problema
 
-Dado como entrada um vetor de pontos de um plano cartesiano, encontre a menorr distância entre dois pontos (Distância Euclediana)
+Dado como entrada um vetor de pontos de um plano cartesiano, encontre a menor distância entre dois pontos (Distância Euclediana)
 
 ### Solução
 
