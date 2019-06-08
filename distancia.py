@@ -15,8 +15,5 @@
 
 # print("teste de python")
 
-a = [2]
 
-a[0] = 20
-a[0] = 25
 print a
