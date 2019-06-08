@@ -2,10 +2,20 @@
 
 import math
 
-m = [[8, 9],[1, 3], [7, 8], [9, 2], [3, 10], [10, 1], [2, 4], [6, 6], [11, 12], [4, 5], [12, 11], [5, 7]]
+#   [x,  y]
+m = [[8, 9],
+    [1, 3], 
+    [7, 8], 
+    [9, 2], 
+    [3, 10], 
+    [10, 1], 
+    [2, 4], 
+    [6, 6], 
+    [11, 12], 
+    [4, 5], 
+    [12, 11], 
+    [5, 7]]
 
-# print "antes"
-# print m
 
 def sort(array, axis):
     for p in range(0, len(array)):
@@ -25,10 +35,6 @@ def sort(array, axis):
         array[p][0] = current_elementX
         array[p][1] = current_elementY
 
-sort(m, "x")
-
-# print "depois"
-# print m
 
 def dist(a,b):
     return math.sqrt(math.pow(a[0] - b[0],2) + math.pow(a[1]-b[1],2))
@@ -52,12 +58,12 @@ def minDistFront(s, end, lower):
     return lower
 
 def minDist(array, start, end):
-    print "Chamada recursiva: start->  "+ str(start)+ " end-> " + str(end)
+    print('Chamada recursiva: start->  ',start,' end-> ',end)
     if (end - start) <= 3:
         new = []
         for i in range(start, end):
             new.append(array[i])
-        print new, minDistBrute(new)
+        print(new,'| Resultado Parcial: ', minDistBrute(new))
         return minDistBrute(new)
 
     middle = int((start + end)/2)
@@ -75,7 +81,27 @@ def minDist(array, start, end):
     mf = minDistFront(s, j, d)
     return min(d, mf)
 
+x = 'x: '
+y = 'y: '
+for i in range(0, len(m)):
+    x += '\t'+str(m[i][0])
+    y += '\t'+str(m[i][1])
 
-print m
-resp = minDist(m, 0, len(m)-1)
-print resp
+print('Entrada de dados:')
+print(x)
+print(y)
+
+sort(m, "x")
+
+x = 'x: '
+y = 'y: '
+for i in range(0, len(m)):
+    x += '\t'+str(m[i][0])
+    y += '\t'+str(m[i][1])
+
+print('Vetor de pontos ordenado em x:')
+print(x)
+print(y)
+
+resp = minDist(m, 0, len(m))
+print('\n\n Resultado: ',resp)
