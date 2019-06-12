@@ -3,18 +3,18 @@
 import math
 
 #   [x,  y]
-m = [[8, 9],
-    [1, 3], 
-    [7, 8], 
-    [9, 2], 
-    [3, 10], 
-    [10, 1], 
-    [2, 4], 
-    [6, 6], 
-    [11, 12], 
-    [4, 5], 
-    [12, 11], 
-    [5, 7]]
+m = [[16, 18],
+    [2, 6], 
+    [14, 16], 
+    [18, 4], 
+    [6, 20], 
+    [20, 2], 
+    [4, 8], 
+    [12, 12], 
+    [22, 24], 
+    [6, 8], 
+    [24, 22], 
+    [10, 14]]
 
 
 def sort(array, axis):
@@ -55,10 +55,11 @@ def minDistFront(s, end, lower):
             j += 1
             if( aux < lower):
                 lower = aux
+    print('Resultado parcial de fronteira: ', lower)
     return lower
 
 def minDist(array, start, end):
-    print('Chamada recursiva: start->  ',start,' end-> ',end)
+    print('Chamada recursiva: start->  ',start,' end-> ',end-1)
     if (end - start) <= 3:
         new = []
         for i in range(start, end):
